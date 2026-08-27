@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rakhi Card</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: #121212;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Outer diagonal striped frame */
+    .card-frame {
+      background: repeating-linear-gradient(
+        45deg,
+        #d84936,
+        #d84936 15px,
+        #ffffff 15px,
+        #ffffff 30px
+      );
+      padding: 16px;
+      border-radius: 40px;
+      width: 100%;
+      max-width: 380px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+
+    /* Inner phone screen canvas */
+    .card-content {
+      background-color: #fffdfa;
+      border-radius: 28px;
+      padding: 24px 20px 40px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Top bar dots */
+    .top-bar {
+      display: flex;
+      gap: 6px;
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #666;
+      border-radius: 50%;
+    }
+
+    /* Red title */
+    .heading {
+      color: #b82329;
+      font-style: italic;
+      font-weight: 800;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      margin-bottom: 25px;
+    }
+
+    /* Avatar Container */
+    .avatar-wrapper {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      margin-bottom: 25px;
+      background-color: #ffd6e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .avatar-wrapper img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Message Text */
+    .subtitle {
+      color: #666;
+      font-size: 1.05rem;
+      line-height: 1.4;
+      margin-bottom: 30px;
+      max-width: 85%;
+    }
+
+    /* Red Action Button */
+    .btn-retry {
+      background-color: #9c1c23;
+      color: #ffffff;
+      border: 2px solid #ffffff;
+      outline: 4px solid #9c1c23;
+      padding: 12px 36px;
+      border-radius: 25px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: transform 0.1s ease;
+    }
+
+    .btn-retry:active {
+      transform: scale(0.96);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card-frame">
+    <div class="card-content">
+      <div class="top-bar">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+
+      <h1 class="heading">HOW DARE YOU!?</h1>
+
+      <div class="avatar-wrapper">
+        <!-- Shin-chan wearing bow illustration -->
+        <img src="https://i.pinimg.com/736x/83/87/1c/83871c569a9412fdf0dbb0151f7b0253.jpg" alt="Shinchan avatar">
+      </div>
+
+      <p class="subtitle">Okay okay, don't cry... let's try that again 🥺</p>
+
+      <button class="btn-retry" onclick="alert('Retrying...')">TRY AGAIN</button>
+    </div>
+  </div>
+
+</body>
+</html>
